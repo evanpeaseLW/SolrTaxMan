@@ -58,6 +58,20 @@ http://localhost:8983
 &facet.field=proc_name
 ```
 
+The Solr response could be parsed together with the taxonomy entity to produce user friendly UI elements for results page:
+
+Breadcrumb: Systems > Notebooks
+
+Facet names
+
+Brand
+Price
+Screen Size
+Operating System
+Hard Drive Type
+RAM
+Processor
+
 
 
 

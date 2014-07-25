@@ -17,7 +17,7 @@ Example business rules a category can contain:
   "filter": "system_type:*",
   "boost": "popularity",
   "children": [
-    <b>{"category": {
+    {"category": {
       "name": "Notebooks",
       "filter": "system_type:Notebook",
       "boost": "brand:Apple^5.0",
@@ -30,7 +30,7 @@ Example business rules a category can contain:
         {"field": "installed_ram", "display": "RAM"},
         {"field": "proc_name", "display": "Processor"}
       ]
-    }}</b>,
+    }},
     {"category": {
       "name": "Desktops",
       "filter": "system_type:Desktop",
@@ -60,17 +60,9 @@ http://localhost:8983
 
 The Solr response could be parsed together with the taxonomy entity to produce user friendly UI elements for results page:
 
-Breadcrumb: Systems > Notebooks
 
-Facet names
-
-Brand
-Price
-Screen Size
-Operating System
-Hard Drive Type
-RAM
-Processor
+*Breadcrumb*: Systems > Notebooks
+*Facet names*: Brand, Price, Screen Size, Operating System, Hard Drive Type, RAM, Processor
 
 
 

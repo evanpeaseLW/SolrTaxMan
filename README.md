@@ -8,7 +8,7 @@ The "taxonomy" is an entity containing a category tree. Each leaf on the tree ho
 
 Example business rules a category can contain:
 - Filter Query - What fq will return relevant docs for the given category.
-- Facets - A list of fields that should be used as facets for the given category.
+- Facets - A list of fields that should be used as facets for the given category paired with user-friendly display names.
 - Boosts - Boosts for the given category (i.e. an e-commerce manager wants to run a promotion and boost one brand over another within "Notebooks").
 
 ```javascript
@@ -39,3 +39,28 @@ Example business rules a category can contain:
   ]
 }}
 ```
+
+If a user clicks on Systems->Notebooks, a Solr query could be derived from the taxonomy entity:
+
+```
+http://localhost:8983
+?q=*:*
+&fq=system_type:*
+&fq=system_type:Notebook
+&boost=popularity brand:Apple^5.0
+&facet=true
+&facet.field=manufacturer
+&facet.field=customer_price
+&facet.field=screen_size_in
+&facet.field=os_family
+&facet.field=hdd_type
+&facet.field=installed_ram
+&facet.field=proc_name
+```
+
+
+
+
+
+
+

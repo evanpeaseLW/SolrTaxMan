@@ -13,17 +13,29 @@ Example business rules a category can contain:
 
 ```javascript
 {"category": {
-  "name": "Notebooks",
-  "filter": "system_type:Notebooks",
-  "boost": "brand:Apple^5.0",
-  "facets": [
-    {"field": "manufacturer", "display": "Brand"},
-    {"field": "customer_price", "display": "Price"},
-    {"field": "screen_size_in", "display": "Sreen Size"},
-    {"field": "os_family", "display": "Operating System"},
-    {"field": "hdd_type", "display": "Hard Drive Type"},
-    {"field": "installed_ram", "display": "RAM"},
-    {"field": "proc_name", "display": "Processor"}
+  "name": "Systems",
+  "filter": "system_type:*",
+  "boost": "popularity",
+  "children": [
+    {"category": {
+      "name": "Notebooks",
+      "filter": "system_type:Notebook",
+      "boost": "brand:Apple^5.0",
+      "facet": [
+        {"field": "manufacturer", "display": "Brand"},
+        {"field": "customer_price", "display": "Price"},
+        {"field": "screen_size_in", "display": "Sreen Size"},
+        {"field": "os_family", "display": "Operating System"},
+        {"field": "hdd_type", "display": "Hard Drive Type"},
+        {"field": "installed_ram", "display": "RAM"},
+        {"field": "proc_name", "display": "Processor"}
+      ]
+    }},
+    {"category": {
+      "name": "Desktops",
+      "filter": "system_type:Desktop",
+      "boost": "brand:Dell^5.0"
+    }}    
   ]
 }}
 ```

@@ -8,6 +8,6 @@ SolrTaxMan
 The "taxonomy" is an entity containing a category tree. Each leaf on the tree holds "business rules" which can be used to build Solr requests for a given category as a user navigates through the tree.
 
 Example business rules a category can contain:
-1. Filer Query - What fq will return docs for the given category.
-2. Facets - A list of fields that should be used as facets in a given category.
-3. Boosts - Boosts for the given category (i.e. an e-commerce manager wants to run a promotion and boost one brand over another within Notebooks).
+1.  Filer Query - What fq will return docs for the given category.
+2.  Facets - A list of fields that should be used as facets in a given category.
+3.  Boosts - Boosts for the given category (i.e. an e-commerce manager wants to run a promotion and boost one brand over another within Notebooks).

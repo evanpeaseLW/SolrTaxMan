@@ -17,7 +17,7 @@ Example business rules a category can contain:
   "filter": "system_type:*",
   "boost": "popularity",
   "children": [
-    {"category": {
+    <b>{"category": {
       "name": "Notebooks",
       "filter": "system_type:Notebook",
       "boost": "brand:Apple^5.0",
@@ -30,7 +30,7 @@ Example business rules a category can contain:
         {"field": "installed_ram", "display": "RAM"},
         {"field": "proc_name", "display": "Processor"}
       ]
-    }},
+    }}</b>,
     {"category": {
       "name": "Desktops",
       "filter": "system_type:Desktop",

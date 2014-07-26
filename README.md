@@ -4,7 +4,7 @@ SolrTaxMan
 
 ## Taxonomy Manager for Apache Solr
 
-The "taxonomy" is an entity containing a category tree. Each leaf on the tree holds "business rules" which can be used to build Solr requests for a given category as a user navigates through the tree.
+The "taxonomy" is an entity containing a category tree. Each leaf on the tree holds "business rules" which can be used to build Solr requests for a given category as a user navigates through the tree. The Solr response can then be used in conjunction with the taxonomy entity to render useful output to the user interface.
 
 Example business rules a category can contain:
 - Filter Query - What fq will return relevant docs for the given category.

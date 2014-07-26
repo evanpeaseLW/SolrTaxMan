@@ -10,6 +10,9 @@ The "taxonomy" is an entity containing a category tree. Each leaf on the tree ho
 - A business-user UI for editing taxonomy.json. It will provide users with the ability to design their taxonomy (add/edit/delete and nest categories), preview default category results and pick facets from available fields in a Solr index, assign user-friendly facet names, manage global and category specific boosts and more features TBD.
 - A RESTful API that encapsulates taxonomy.json and Solr parsing.
 
+Phase 2
+- Develop connectors to commercial PIM solutions. Many PIM solutions include some sort of taxonomy designer. In those cases taxonomy.json could be created automatically. Business users would edit taxonomy.json to input Search specific business rules that PIM does not include.
+
 Example business rules a category can contain:
 - Filter Query - The query that will return relevant docs for the given category. At query time this would become a fq parameter appended to any previous fqs from parent categories. An optional "override" parameter will enable the category to omit previous fqs.
 - Facets - A list of fields that should be used as facets for the given category paired with user-friendly display names.

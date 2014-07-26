@@ -62,6 +62,7 @@ The Solr response could be parsed together with the taxonomy entity to produce u
 
 
 *Breadcrumb*: Systems > Notebooks
+
 *Facet names*: Brand, Price, Screen Size, Operating System, Hard Drive Type, RAM, Processor
 
 

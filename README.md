@@ -4,10 +4,14 @@ SolrTaxMan
 
 ## Taxonomy Manager for Apache Solr
 
-The "taxonomy" is an entity containing a category tree. Each leaf on the tree holds "business rules" and metadata which can be used to build Solr requests for a given category as a user navigates through the tree. The Solr response can then be used in conjunction with the taxonomy entity's metadata to render useful output to the user interface. This should be implemented through an API on top of Solr.
+The "taxonomy" is an entity containing a category tree. Each leaf on the tree holds "business rules" and metadata which can be used to build Solr requests for a given category as a user navigates through the tree. The Solr response can then be used in conjunction with the taxonomy metadata to render useful output to the user interface. This should be implemented through an API on top of Solr. The project will have 3 subprojects:
+
+- taxonomy.json
+- A business-user UI for editing taxonomy.json. It will provide them with the ability to design their taxonomy (add/edit/delete and nest categories), preview default category results and pick facets from available fields in a Solr index, assign user-friendly facet names, manage global and category specific boosts and more features TBD.
+- A RESTful API that encapsulates the taxonomy.json and Solr parsing.
 
 Example business rules a category can contain:
-- Filter Query - What fq will return relevant docs for the given category. At query time this would become a fq parameter appended to any previous fqs from parent categories. An option "override" parameter will enable the category to omit previous fqs.
+- Filter Query - The query that will return relevant docs for the given category. At query time this would become a fq parameter appended to any previous fqs from parent categories. An optional "override" parameter will enable the category to omit previous fqs.
 - Facets - A list of fields that should be used as facets for the given category paired with user-friendly display names.
 - Boosts - Boosts for the given category (i.e. an e-commerce manager wants to run a promotion and boost one brand over another within "Notebooks").
 

@@ -7,7 +7,7 @@ SolrTaxMan
 The "taxonomy" is an entity containing a category tree. Each leaf on the tree holds "business rules" and metadata which can be used to build Solr requests for a given category as a user navigates through the tree. The Solr response can then be used in conjunction with the taxonomy metadata to render useful output to the user interface. This should be implemented through an API on top of Solr. The project will have 3 subprojects:
 
 - taxonomy.json
-- A business-user UI for editing taxonomy.json. It will provide them with the ability to design their taxonomy (add/edit/delete and nest categories), preview default category results and pick facets from available fields in a Solr index, assign user-friendly facet names, manage global and category specific boosts and more features TBD.
+- A business-user UI for editing taxonomy.json. It will provide users with the ability to design their taxonomy (add/edit/delete and nest categories), preview default category results and pick facets from available fields in a Solr index, assign user-friendly facet names, manage global and category specific boosts and more features TBD.
 - A RESTful API that encapsulates the taxonomy.json and Solr parsing.
 
 Example business rules a category can contain:

@@ -8,7 +8,7 @@ The "taxonomy" is an entity containing a category tree. Each leaf on the tree ho
 
 - taxonomy.json
 - A business-user UI for editing taxonomy.json. It will provide users with the ability to design their taxonomy (add/edit/delete and nest categories), preview default category results and pick facets from available fields in a Solr index, assign user-friendly facet names, manage global and category specific boosts and more features TBD.
-- A RESTful API that encapsulates the taxonomy.json and Solr parsing.
+- A RESTful API that encapsulates taxonomy.json and Solr parsing.
 
 Example business rules a category can contain:
 - Filter Query - The query that will return relevant docs for the given category. At query time this would become a fq parameter appended to any previous fqs from parent categories. An optional "override" parameter will enable the category to omit previous fqs.

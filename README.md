@@ -4,10 +4,11 @@ SolrTaxMan
 
 ## Taxonomy Manager for Apache Solr
 
-The "taxonomy" is an entity containing a category tree. Each leaf on the tree holds "business rules" and metadata which can be used to build Solr requests dynamically for a given category as a user navigates through the tree. The Solr response can then be used in conjunction with the taxonomy metadata to render useful output to the user interface. This should be implemented through an API on top of Solr. The project will have 3 subprojects:
+The "taxonomy" is an entity containing a category tree. Each leaf on the tree holds "business rules" and metadata which can be used at query-time to build Solr requests dynamically for a given category as a user navigates through the tree. The Solr response can then be used in conjunction with the taxonomy metadata to render useful output to the user interface. This should be implemented through an API on top of Solr. The project will have 3 subprojects:
 
 **Can't Solr do this by itself?**
-This is true to a degree. This is a common use case and people have done. You can do some creative things with facet.prefix, pivot facets, heirchical facets
+
+This is true to a degree. There are ways to achieve behavior similar to what this project aspires to simply by indexing your data a certain way and leveraging features such as facet.prefix, Pivot Facets, [Hierarchical Facets](http://wiki.apache.org/solr/HierarchicalFaceting#Flattened_Data_.2BIBw-breadcrumbs.2BIB0-)
 
 - taxonomy.json. The file containing the taxonomy, business rules, and metadata.
 - A business-user UI for editing taxonomy.json. It will provide users with the ability to design their taxonomy (add/edit/delete and nest categories), preview default category results and pick facets from available fields in a Solr index, assign user-friendly facet names, manage global and category specific boosts, signal integration and more features TBD.

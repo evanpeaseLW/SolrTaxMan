@@ -10,7 +10,7 @@ The "taxonomy" is an entity containing a category tree. Each leaf on the tree ho
 
 > There are ways to achieve behavior similar to what this project aspires to simply by indexing your data a certain way and leveraging features such as facet.prefix, Pivot Facets, [Hierarchical Facets](http://wiki.apache.org/solr/HierarchicalFaceting#Flattened_Data_.2BIBw-breadcrumbs.2BIB0-) and more. While these approaches can work as solutions, I've always found them somewhat constrained in practice for my past use cases.
 
-> A "taxonomy" is relational and as such is better suited in a normalized form. Solr is amazing at handling anything that can be represented in a denormalized form. That is why I prefer to let Solr do what it does best (search documents) and use something else to control the taxonomy. The goal of this project is to provide the "something else" and to make it work in perfect harmony with Solr.
+> A "taxonomy" is relational and as such is better suited in a normalized form. Solr is amazing at handling anything that can be represented in a denormalized form. That is why I prefer to let Solr do what it does best (searching relatively flat documents) and use something else to control the taxonomy. The goal of this project is to provide the "something else" and to make it work in perfect harmony with Solr.
 
 The project will have 3 subprojects:
 

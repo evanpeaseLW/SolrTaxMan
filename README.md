@@ -75,10 +75,7 @@ http://localhost:8983
 
 The Solr response could be parsed together with the taxonomy entity to produce user friendly UI elements for results page:
 
-The breadcrumb, and facet names 
-
-Breadcrumb: "Systems > Notebooks" *(taxonomy)*
-
+**TODO: Show what an API response could look like when taxonomy.json is used to augment it.**
 
 
 

@@ -4,7 +4,9 @@ SolrTaxMan
 
 ## Taxonomy Manager for Apache Solr
 
-The "taxonomy" is an entity containing a category tree. Each leaf on the tree holds "business rules" and metadata which can be used at query-time to build Solr requests dynamically for a given category as a user navigates through the tree. The Solr response can then be used in conjunction with the taxonomy metadata to render useful output to the user interface. This should be implemented through an API on top of Solr.
+The "taxonomy" is an entity containing a category tree. Each leaf on the tree holds "business rules" and metadata which can be used at query-time to build Solr requests dynamically for as a user navigates through the tree. The Solr response can then be used in conjunction with the taxonomy metadata to render useful output to the user interface.
+
+The goal is to be able to provide an API that enables easy integration of Solr into website navigation. For example, a user selects Systems->Notebooks on an eCommerce website. This should fire off a request to Solr for Notebooks together with a list of default parameters specific to the Notebooks category.
 
 **Can't Solr do this by itself?**
 
@@ -26,7 +28,7 @@ A simple, preliminary list of business rules a category can contain:
 - Facets - A list of fields that should be used as facets for the given category paired with user-friendly display names.
 - Boosts - Boosts for the given category (i.e. an e-commerce manager wants to run a promotion and boost one brand over another within "Notebooks").
 
-### A Very Simple Example
+**A Very Simple Example**
 
 ```javascript
 {"category": {

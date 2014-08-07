@@ -4,7 +4,7 @@ SolrTaxMan
 
 ## Taxonomy Manager for Apache Solr
 
-The "taxonomy" is an entity containing a category tree. Each leaf on the tree holds "business rules" and metadata which can be used at query-time to build Solr requests dynamically for as a user navigates through the tree. The Solr response can then be used in conjunction with the taxonomy metadata to render useful output to the user interface.
+The "taxonomy" is an entity containing a category tree. Each leaf on the tree holds "business rules" and metadata which can be used at query-time to build Solr requests dynamically as a user navigates through the tree. The Solr response can then be used in conjunction with the taxonomy metadata to render useful output to the user interface.
 
 The goal is to be able to provide an API that enables easy integration of Solr into website navigation. For example, a user selects Systems->Notebooks on an eCommerce website. This should fire off a request to Solr for Notebooks together with a list of default parameters specific to the Notebooks category.
 
@@ -12,7 +12,7 @@ The goal is to be able to provide an API that enables easy integration of Solr i
 
 > There are ways to achieve behavior similar to what this project aspires to simply by indexing your data a certain way and leveraging features such as facet.prefix, Pivot Facets, [Hierarchical Facets](http://wiki.apache.org/solr/HierarchicalFaceting#Flattened_Data_.2BIBw-breadcrumbs.2BIB0-) and more. While these approaches can work as solutions, I've always found them somewhat constrained in practice for my past use cases.
 
-> A "taxonomy" is relational and as such is better suited in a normalized form. Solr is amazing at handling anything that can be represented in a denormalized form. That is why I prefer to let Solr do what it does best (searching relatively flat documents) and use something else to control the taxonomy. The goal of this project is to provide the "something else" and to make it work in perfect harmony with Solr.
+> A "taxonomy" is relational and as such is better suited in a normalized form. Solr is amazing at handling anything that can be represented in a denormalized form. That is why I prefer to let Solr do what it does best (searching relatively flat documents) and use something else in the application layer to control the taxonomy. The goal of this project is to provide the "something else".
 
 The project will have 3 subprojects:
 

@@ -26,6 +26,8 @@ A simple, preliminary list of business rules a category can contain:
 - Facets - A list of fields that should be used as facets for the given category paired with user-friendly display names.
 - Boosts - Boosts for the given category (i.e. an e-commerce manager wants to run a promotion and boost one brand over another within "Notebooks").
 
+### A Very Simple Example
+
 ```javascript
 {"category": {
   "name": "Systems",
